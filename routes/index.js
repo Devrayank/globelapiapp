@@ -8,6 +8,9 @@ const usercontroller = require("../controllers/usersController");
 const productcontroller = require("../controllers/productController");
 
 let routes = (app) => {
+
+  router.post("/", controller.upload);
+
   router.post("/post-product", controller.upload);
 
   router.get("/get-product", controller.getproduct);
