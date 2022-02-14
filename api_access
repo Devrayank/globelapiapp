@@ -1,0 +1,10 @@
+http://localhost:4002/register
+http://localhost:4002/login
+
+http://localhost:4002/post-product
+http://localhost:4002/get-products
+http://localhost:4002/product-detail/6209ddb8744303e7148148a0
+
+http://localhost:4002/get-users
+http://localhost:4002/user-detail/62065cb76b684f5e5a89f590
+

@@ -1,0 +1,1679 @@
+{
+	"info": {
+		"_postman_id": "6ba089ee-eec3-4d5f-9113-8dd8784af323",
+		"name": "lookbym.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"products.json"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "32001717174318,32001717108782",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products - filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products.json?limit=250&page=1",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"products.json"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "SCRUNCHIE-GREY",
+									"disabled": true
+								},
+								{
+									"key": "vendor",
+									"value": "KS005",
+									"disabled": true
+								},
+								{
+									"key": "product_type",
+									"value": "Dress",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "250"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products - count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/count.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"products",
+								"count.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products - get details by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products.json?ids=4447641862226,4447644221522",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"products.json"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "4447641862226,4447644221522"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products - by collection ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products.json?collection_id=408760199",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"products.json"
+							],
+							"query": [
+								{
+									"key": "collection_id",
+									"value": "408760199"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products Get by callection id (custom)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shoplookbym.com/api/products/408760199",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"408760199"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product by id (custom)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://shoplookbym.com/api/products/4447644221522/product?customer_id=21",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"4447644221522",
+								"product"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shoplookbym.com/api/search/product?title=adjustable&customer_id=21",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"search",
+								"product"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "adjustable"
+								},
+								{
+									"key": "customer_id",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Collections",
+			"item": [
+				{
+					"name": "smart_collections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"smart_collections.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "smart_collections - count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections/count.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"smart_collections",
+								"count.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "smart_collections - get details by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections/408760199.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"smart_collections",
+								"408760199.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "smart_collections - filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections.json?title=ACCESSORIES",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"smart_collections.json"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "ACCESSORIES"
+								},
+								{
+									"key": "sort_order",
+									"value": "manual",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get section",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer Ce5zBqjfPl05TSwAaRP5eBPErRZ71PWdFOWeMba9zrBE1HWHWINyW9CSazNClFHfow0c41aXYZp9h3am",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/getsection?customer_id=17",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"getsection"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"orders.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order - by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders.json?ids=965923649",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"orders.json"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "965923649"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders- by customer id/email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders.json?customer_email=proprietress@vixendayspa.com",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"orders.json"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "965923649",
+									"disabled": true
+								},
+								{
+									"key": "customer_email",
+									"value": "proprietress@vixendayspa.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order - cancel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/cancel.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"orders",
+								"4554953422",
+								"cancel.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order-cancel and refund",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"note\": \"Broke in shipping\",\n  \"amount\": \"10.00\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/cancel.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"orders",
+								"4554953422",
+								"cancel.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer Order Api",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7YUeM5oZJIaz9iGGfkprgYdkSJSVw0OFR9NosNPqcz3kVxThCJkrzbvuOHsgcBPCTTZXZpCqn3KPdIx0",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://shoplookbym.com/api/orders?customer_id=21&customer_email=proprietress@vixendayspa.com",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "21"
+								},
+								{
+									"key": "customer_email",
+									"value": "proprietress@vixendayspa.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "customer-by query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/search.json?query=email:test1@lookbym.com",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"customers",
+								"search.json"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "email:test1@lookbym.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "custmer-create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test1@lookbym.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123654aaaaaaa",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "business_name:business name/tax_id:1232",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123654aaaaaaa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "first_name",
+									"value": "test1",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "test1",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/create",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"lookbook@lookbym.com\"}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/login",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer verify otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"lookbook@lookbym.com\",\"password\":\"6681696\"}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/verify",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Device Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer Ce5zBqjfPl05TSwAaRP5eBPErRZ71PWdFOWeMba9zrBE1HWHWINyW9CSazNClFHfow0c41aXYZp9h3am"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"customer_id\":2,\"device_token\":\"gdfdghgh44gfdf\",\"device_id\":\"dfdsfs\"}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/device",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"device"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stock Alert List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer xpCnUPx01v0nuL6URl59je2JNAX61Set9vsWptz5bU4KD9PMyAX7mJ8XXNa4kz4VyxfadPWgojh5N5Wm",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"customer_id\":17}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/21/stock?customer_id=21",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"21",
+								"stock"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product Stock Alert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer xpCnUPx01v0nuL6URl59je2JNAX61Set9vsWptz5bU4KD9PMyAX7mJ8XXNa4kz4VyxfadPWgojh5N5Wm"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"customer_id\":21,\"product_id\":4447644221522,\"product_variant_id\":31674057785426,\"inventory_item_id\":33320829485138}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/products/stock-alert",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"stock-alert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Stock Alert Notification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"inventory_item_id\":23836802613330,\"location_id\":35911925806,\"available\":1,\"updated_at\":\"2020-05-25T07:36:25-04:00\",\"admin_graphql_api_id\":\"gid://shopify/InventoryLevel/70139281454?inventory_item_id=23836802613330\"}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/products/stock-notification",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"stock-notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "testing fcm notification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "key=AAAA_5ngFfU:APA91bESoa0PriUfGwVuFW3T3e_R2hgMyamnhC5VsNIjbvUevIKxne1aDc3qZ_nH5mGRDHVvXl0NqrDgnJc4n3MOsmbjmhuNP7SfpMNBAvXCnwnDKyYUn9WkJiHsdFptkohMwBUA3DJa",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"registration_ids\": [\"dZRqDQLU46c:APA91bGg4xwVUG6-0IWavx1jb8zWwviS7bfcZjQjebVAqSkB_RCXODO7lNG6vMvHsXOURJP2E06lkHaa_m1vsYcq6ELRRHn0d8iumG0jOJp4S6lxvkZU8u5lCmfNYY1KJ_Qj7ttEH1p_\"],\r\n \"notification\": {\r\n   \"body\": \"Hi From API Send\",\r\n   \"title\": \"From PostMan Sending API\",\r\n     \"key_1\" : \"Value for key_1\",\r\n     \"key_2\" : \"Value for key_2\"\r\n },\r\n \"data\": {\r\n   \"body\": \"Hi From API Send\",\r\n   \"title\": \"From PostMan Sending API\",\r\n   \"key_3\": \"Hello_value\",\r\n   \"image\": \"https://pbs.twimg.com/profile_images/1057899591708753921/PSpUS-Hp.jpg\"\r\n },\r\n \"android\": {\r\n   \"notification\": {\r\n     \"title\": \"Testing\",\r\n     \"body\": \"Hello\",\r\n     \"smallIcon\": {\r\n       \"icon\": \"hello_icon\"\r\n     }\r\n   }\r\n }\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://fcm.googleapis.com/fcm/send",
+							"protocol": "https",
+							"host": [
+								"fcm",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"fcm",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get shopify credential",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer Ce5zBqjfPl05TSwAaRP5eBPErRZ71PWdFOWeMba9zrBE1HWHWINyW9CSazNClFHfow0c41aXYZp9h3am",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer_id",
+									"value": "17",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/shopifycredential?customer_id=17",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"shopifycredential"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://fcm.googleapis.com/fcm/send",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "key=AAAA_5ngFfU:APA91bESoa0PriUfGwVuFW3T3e_R2hgMyamnhC5VsNIjbvUevIKxne1aDc3qZ_nH5mGRDHVvXl0NqrDgnJc4n3MOsmbjmhuNP7SfpMNBAvXCnwnDKyYUn9WkJiHsdFptkohMwBUA3DJa",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "registration_ids",
+									"value": "exhi37qfUVY:APA91bEzZSHoqOCs0L0q4cSPLxDjUyxD-khxILkteWj_YP52-fmgfj9H_9YzSXPMyzM8KFxA0j3ILNno0pLjRWCJ1F0gfUN_YleXKZKv5AmND3NcUTrykUeHJXNptjGZt4gf04L7nvcZ",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://fcm.googleapis.com/fcm/send",
+							"protocol": "https",
+							"host": [
+								"fcm",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"fcm",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Address",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer oT7lBI9yFtqOhJRjV2p62DQZtNbtqU87VzRZrUkj76RV6XwCtaYk3aRTTWpg92oFwZsm0mMuoQAztNTT"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer_id\":21,  \r\n  \"address\": {\r\n    \"address1\": \"1 Rue des Carrieres\",\r\n    \"address2\": \"Suite 1234\",\r\n    \"city\": \"Montreal\",\r\n    \"company\": \"Fancy Co.\",\r\n    \"first_name\": \"Samuel\",\r\n    \"last_name\": \"de Champlain\",\r\n    \"phone\": \"819-555-5555\",\r\n    \"province\": \"Quebec\",\r\n    \"country\": \"Canada\",\r\n    \"zip\": \"G1R 4P5\",\r\n    \"name\": \"Samuel de Champlain\",\r\n    \"province_code\": \"QC\",\r\n    \"country_code\": \"CA\",\r\n    \"country_name\": \"Canada\"\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/shopify/credential?customer_id=21",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"shopify",
+								"credential"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer 7YUeM5oZJIaz9iGGfkprgYdkSJSVw0OFR9NosNPqcz3kVxThCJkrzbvuOHsgcBPCTTZXZpCqn3KPdIx0"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customer_id\":21,  \r\n  \"address_id\": 3726858747986\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/address/delete",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"address",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer oT7lBI9yFtqOhJRjV2p62DQZtNbtqU87VzRZrUkj76RV6XwCtaYk3aRTTWpg92oFwZsm0mMuoQAztNTT"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"customer_id\":21,\r\n \"address_id\":3726928281682,\r\n  \"address\": {\r\n    \"id\": 3726928281682,\r\n    \"zip\": \"90210\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/address/edit",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"address",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "blog - all(insider)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/49840226386/articles.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"blogs",
+								"49840226386",
+								"articles.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog - event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/49840193618/articles.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"blogs",
+								"49840193618",
+								"articles.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog - style tips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/49839997010/articles.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"blogs",
+								"49839997010",
+								"articles.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog -all by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/49840226386/articles/384832831570.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"blogs",
+								"49840226386",
+								"articles",
+								"384832831570.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog-event by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/49840193618/articles/384274890834.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"blogs",
+								"49840193618",
+								"articles",
+								"384274890834.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blog-style tips by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/49839997010/articles/384832733266.json",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"admin",
+								"blogs",
+								"49839997010",
+								"articles",
+								"384832733266.json"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "search",
+			"item": [
+				{
+					"name": "search - all type ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/search/suggest.json?q=hair&resources[type]=product&resources[limit]=4&resources[options][unavailable_products]=last&resources[options][fields]=title,product_type,variants.title,vendor,body",
+							"protocol": "https",
+							"auth": {
+								"user": "{{apikey}}",
+								"password": "{{password}}"
+							},
+							"host": [
+								"{{yourstore}}",
+								"myshopify",
+								"com"
+							],
+							"path": [
+								"search",
+								"suggest.json"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "hair"
+								},
+								{
+									"key": "resources[type]",
+									"value": "product"
+								},
+								{
+									"key": "resources[limit]",
+									"value": "4"
+								},
+								{
+									"key": "resources[options][unavailable_products]",
+									"value": "last"
+								},
+								{
+									"key": "resources[options][fields]",
+									"value": "title,product_type,variants.title,vendor,body"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Wishlist (custom)",
+			"item": [
+				{
+					"name": "custom get wish list by customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer xpCnUPx01v0nuL6URl59je2JNAX61Set9vsWptz5bU4KD9PMyAX7mJ8XXNa4kz4VyxfadPWgojh5N5Wm",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/21/wishlist?customer_id=21",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"21",
+								"wishlist"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update wish list by id ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "product_variant_id",
+									"value": "31674057785426",
+									"type": "text"
+								},
+								{
+									"key": "customer_id",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "4447644221522",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/wishlist/9",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"wishlist",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete wish list product by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/wishlist/5",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"wishlist",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add wishlist product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer xpCnUPx01v0nuL6URl59je2JNAX61Set9vsWptz5bU4KD9PMyAX7mJ8XXNa4kz4VyxfadPWgojh5N5Wm",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"customer_id\":21,\"product_variant_id\":31674057785426,\"product_id\":4447644221522,\"flag\":\"Add\"}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://shoplookbym.com/api/customer/wishlist/",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"wishlist",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Navigation menu",
+			"item": [
+				{
+					"name": "Menu Items",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7WooqpFg1HStymKh5ROMcytkSiptV3v8P15cKMi0Mh4EObSzIBItKTSggzxDGvvmRlbOrC0YhewSuF6o",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://shoplookbym.com/api/menuitems?customer_id=17",
+							"protocol": "https",
+							"host": [
+								"shoplookbym",
+								"com"
+							],
+							"path": [
+								"api",
+								"menuitems"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
